@@ -558,7 +558,7 @@ footer {
 .logo-transicao {
     position: relative;
     background: linear-gradient(to bottom, #e2e3e4 50%, #0e2a4d 50%);
-    height: 300px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
