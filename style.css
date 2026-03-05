@@ -396,8 +396,8 @@ h1 {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 2%;
+    justify-content: center;
+    /* margin-left: 2%; */
 }
 
 .card {
@@ -422,13 +422,14 @@ h1 {
     background-color: #176dcf;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-radius: 40px;
     cursor: pointer;
     transition: transform .2s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
-    font-size: 22px
+    font-size: 12;
+    
 }
 
 .btn-card:hover {
@@ -488,54 +489,56 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    /* justify-content: space-between;
+    align-items: flex-start; */
+    justify-content: center;
+    align-items: center;
     background-color: #0e2a4d;
     color: white;
-    padding: 60px 100px;
+    padding: 2rem;
     flex-wrap: wrap;
     margin-top: 0;
-    gap: 160px;
+    /* gap: 160px; */
 }
 
-.footer-left img {
+.footer-info img {
     border-radius: 50%;
     width: 10%;
     justify-content: center;
 }
 
-.footer-left {
+.footer-info {
     flex: 1;
     min-width: 300px;
 }
 
-.footer-left h2 {
+.footer-info h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.footer-left p {
+.footer-info p {
     line-height: 1.6;
     margin-bottom: 25px;
     color: #cfd8e3;
 }
 
-.footer-right {
+.footer-contato {
     flex: 1;
     min-width: 300px;
 }
 
-.footer-right p {
+.footer-contato p {
     margin-bottom: 15px;
     color: #cfd8e3;
 }
 
-.footer-right a {
+.footer-contato a {
     color: #37a2ff;
     text-decoration: none;
 }
 
-.footer-right a:hover {
+.footer-contato a:hover {
     text-decoration: underline;
 }
 
