@@ -112,6 +112,62 @@ body {
     background: #176dcf;
 }
 
+/* botão hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-right: 2rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+    #main-header{
+        padding: 15px 20px;
+    }
+
+    #main-header.scrolled{
+        padding: 15px 20px;
+    }
+
+    .logo-titulo img{
+        width: 60px;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+        font-size: 28px;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        background: #176dcf;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul{
+        margin: 0;
+    }
+
+}
 
 h1 {
     margin-left: 4%;
@@ -429,7 +485,7 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     font-size: 12;
-    
+
 }
 
 .btn-card:hover {
