@@ -71,7 +71,6 @@ body {
 
 #main-header.scrolled {
     background-color: white;
-    color: #176dcf;
     padding: 10px 80px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -86,6 +85,10 @@ body {
 
 #main-header.scrolled .nav-menu a:hover {
     color: #0e4fa8;
+}
+
+#main-header.scrolled .nav-menu {
+    background: white;
 }
 
 @media (max-width: 768px) {
@@ -107,7 +110,6 @@ body {
     background: #176dcf;
 }
 
-/* botão hamburger */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -117,22 +119,15 @@ body {
     margin-right: 2rem;
 }
 
-/* MENU MOBILE */
+#main-header.scrolled .hamburger {
+    color: #176dcf;
+}
+
 @media (max-width: 900px) {
 
     #main-header {
         padding: 15px 20px;
-        background-color: white;
     }
-
-    #main-header .titulo {
-        color: #176dcf;
-    }
-
-    #main-header .nav-menu a {
-        color: #176dcf;
-    }
-
 
     #main-header.scrolled {
         padding: 15px 20px;
@@ -140,17 +135,15 @@ body {
 
     .hamburger {
         display: block;
-        color: #176dcf;
     }
 
-     .nav-menu {
+    .nav-menu {
         position: fixed;
-        margin-top: 15rem;
+        top: 0;
         right: -100%;
         height: 100vh;
         width: 250px;
-        background: white;
-        
+        background: #176dcf;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -161,31 +154,13 @@ body {
     .nav-menu ul {
         flex-direction: column;
         gap: 25px;
-
-        
     }
 
-   
     .nav-menu.active {
         right: 0;
     }
 
-    /* Adicionando ícones antes dos links do menu */
-    #nav-menu ul li a::before {
-        font-family: "Font Awesome 6 Free"; /* Fonte do FA */
-        font-weight: 900; /* necessário para solid icons */
-        margin-right: 8px;
-        display: inline-block;
-    }
-
-    /* Ícones diferentes para cada link */
-    #nav-menu ul li:nth-child(1) a::before { content: "\f015"; } /* Início: casa */
-    #nav-menu ul li:nth-child(2) a::before { content: "\f02d"; } /* Cursos: livro */
-    #nav-menu ul li:nth-child(3) a::before { content: "\f007"; } /* Área de aluno: usuário */
-    #nav-menu ul li:nth-child(4) a::before { content: "\f19c"; } /* FETEC: universidade */
-    #nav-menu ul li:nth-child(5) a::before { content: "\f0e0"; } /* Contato: envelope */
-    
-    }
+}
 
     .nav-menu ul{
         margin: 0;
@@ -195,8 +170,11 @@ h1 {
     margin-left: 4%;
     margin-top: 6%;
     color: #176dcf;
-
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 500;
 }
+
 
 #icone {
     color: #176dcf;
@@ -208,15 +186,17 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 7em 10%;
+    padding: 88px 10%;
     gap: 50px;
     flex-wrap: wrap;
+    margin-bottom: 4%;
 }
 
 .intro-img img {
     width: 100%;
     max-width: 500px;
     border-radius: 8px;
+    margin-top: 65px;
     
 }
 
@@ -234,15 +214,15 @@ h1 {
 }
 
 .intro .btn-card {
-    background-color: #176dcf;
-    color: #ffffff;
+    background-color: #e2e3e4;
+    color: #176dcf;
     font-weight: 700;
     font-size: 20px;
     border-radius: 40px;
 }
 
 .intro .btn-card:hover {
-    background-color: #00498E;
+    background-color: #e2e3e4;
     transform: scale(1.05);
 }
 
@@ -258,6 +238,25 @@ h1 {
         max-width: 80%;
         top: 0;
     }
+
+     .intro2-img {
+        justify-content: center;
+    }
+
+    .intro2-img img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .intro-img img {
+        margin-top: 75px;
+    }
+
 }
 
 .intro2 {
@@ -266,11 +265,11 @@ h1 {
     align-items: center;
     justify-content: center;
     height: 65vh;
-    padding: 2rem 10%;
+    padding: 0 10%;
     gap: 50px;
-    /* position: relative;
+    position: relative;
     overflow: visible;
-    margin-bottom: 5%; */
+    margin-bottom: 3%;
 }
 
 .intro2-img {
@@ -316,10 +315,10 @@ h1 {
 
 .intro2 .btn-card:hover {
     background-color: #0e4fa8;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .intro2 {
         flex-direction: column-reverse;
         height: auto;
@@ -340,7 +339,6 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    margin-top: 5%;
 }
 
 .carousel-row {
@@ -365,9 +363,6 @@ h1 {
     animation: scroll-left 90s linear infinite;
 }
 
-.row-top {
-    margin-top: 4%;
-}
 
 .card-carousel {
     background: white;
@@ -436,7 +431,7 @@ h1 {
 
 .btn-carousel:hover {
     transition: 0.3s;
-    transform: scale(1.05);
+    transform: scale(1.02);
     background-color: #0e4fa8;
 }
 
@@ -451,7 +446,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* margin-left: 2%; */
 }
 
 .card {
@@ -488,7 +482,7 @@ h1 {
 
 .btn-card:hover {
     background-color: #0669c5;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .card:hover {
