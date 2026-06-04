@@ -30,32 +30,3 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".cards .card");
-    const btn = document.getElementById("toggleCards");
-
-    let expanded = false;
-
-    function atualizarCards() {
-        const limite = window.innerWidth <= 900 ? 4 : 8;
-
-        cards.forEach((card, index) => {
-            if (!expanded && index >= limite) {
-                card.classList.add("hidden-card");
-            } else {
-                card.classList.remove("hidden-card");
-            }
-        });
-
-        btn.textContent = expanded ? "Mostrar menos" : "Mostrar mais";
-    }
-
-    atualizarCards();
-
-    btn.addEventListener("click", () => {
-        expanded = !expanded;
-        atualizarCards();
-    });
-
-    window.addEventListener("resize", atualizarCards);
-});
